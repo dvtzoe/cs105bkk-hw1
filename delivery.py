@@ -61,7 +61,7 @@ class PromoItem(MenuItem):
     def cost(self, quantity: int) -> int:
         """Return what quantity costs when every third one is free."""
 
-        return self.price * (quantity - (quantity // 3))
+        return self.cost(quantity - (quantity // 3))
 
 
 class Order:

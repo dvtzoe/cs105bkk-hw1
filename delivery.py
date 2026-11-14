@@ -34,7 +34,7 @@ class MenuItem:
     def __repr__(self) -> str:
         """Return the developer view, for example MenuItem('Pad Thai', 60)."""
 
-        return f"MenuItem({self.name!r}, {self.price})"
+        return f"{type(self).__name__}({self.name!r}, {self.price})"
 
     @override
     def __eq__(self, other: object) -> bool:
